@@ -1,4 +1,4 @@
-# Massroom Docs {: .title }
+<h1 class="title">Massroom Docs</h1>
 
 Welcome to the Massroom Docs! Here you'll find everything you'll need to know about massroom, and building chatbots with pure vanilla js.
 
@@ -9,6 +9,33 @@ We also document our code here, all of it can be found in our [GitHub Repo](http
 ## Source Code Documentation:
 
 Massroom's core messaging system uses [Xano's](https://xano.com) realtime Websocket system. The frontend was by us.
+
+### Message Displaying
+
+To display messages, you can use the `displayMessages(message)` to input a message right before the end of the `messageList` HTML `<div>`.
+
+eg.
+
+```javascript
+var clientMessage;
+
+// code to handle message generation
+
+displayMessage(clientMessage);
+```
+
+### Sending Messages
+
+Uses Xano's API to send messages, this is considered a `public` message. All subscribed users **will** see this message, if you are making a chatbot, **do NOT** send account info over this method.
+
+eg.
+
+```javascript
+var clientSendMessage
+// use mainChannel to support the MAIN CHATROOM. Private chatrroms are currently broken.
+
+mainChannel.message(clientSentMessage);
+```
 
 ---
 
