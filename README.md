@@ -1,5 +1,7 @@
 <h1 class="title">Massroom Docs</h1>
 
+<a class="button" href="/">Back to Main</a>
+
 Welcome to the Massroom Docs! Here you'll find everything you'll need to know about massroom, and building chatbots with pure vanilla js.
 
 We also document our code here, all of it can be found in our [GitHub Repo](https://github.com/Massroom/massroom.github.io/).
