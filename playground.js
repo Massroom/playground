@@ -72,7 +72,7 @@ sendButton.addEventListener('click', () => {
 		displayMessage(`
     <!--<p style="font-size: small; color: #e6e6e6;">${username}</p>-->
     <p>${message}</p>
-  `;);
+  `);
 		messageInput.value = ''; // Clear input field
 	}, 200);
 });
@@ -93,3 +93,40 @@ function updateAuthStatus() {
 
 // Call updateAuthStatus() when the page loads
 updateAuthStatus();
+
+
+
+
+// playground Bot
+
+// for chatbot(s)
+sendButton.addEventListener('click', () => {
+  console.log('bot ready');
+  const message = messageInput.value;
+  console.log('bot read: ' + message);
+  if (message.startsWith('/run js')) {
+    const question = message.slice('/run js'.length).trim();
+    var code;
+    console.log('Ran: ' + code);
+    displayMessage(`
+    <p style="color: #fff45c;">Code Runner: Your JS code is below this line, if it doesn't work, try debugging using <code>console.log();</code></p>
+    <script>${code}</script>
+    `);
+  } else if (message.startsWith('/run css')) {
+    const question = message.slice('/run css'.length).trim();
+    var code;
+    console.log('Ran: ' + code);
+    displayMessage(`
+    <p style="color: #fff45c;">Code Runner: Your CSS code is below this line.</p>
+    <script>${code}</style>
+    `);
+  } else if (message.startsWith('/run html')) {
+    const question = message.slice('/run html'.length).trim();
+    var code;
+    console.log('Ran: ' + code);
+    displayMessage(`
+    <p style="color: #fff45c;">Code Runner: Your HTML code is below this line.</p>
+    <div>${code}</div>
+    `);
+  };
+});
