@@ -68,7 +68,6 @@ function displayMessage(message) {
 sendButton.addEventListener('click', () => {
 	setTimeout(function(){
 		const message = messageInput.value;
-		checkForSpam(message); // Execute spam detection
 		displayMessage(`
     <!--<p style="font-size: small; color: #e6e6e6;">${username}</p>-->
     <p>${message}</p>
